@@ -16,6 +16,11 @@ typedef NS_ENUM(NSInteger, ThemePathType) {
 @interface ThemePath : NSObject
 
 @property (nonatomic, assign) ThemePathType type;
+@property (nonatomic, strong) NSURL * baseUrl;
+
+- (instancetype)initMainbundlePath;
+
+- (instancetype)initSandboxPathWith:(NSString *)themeName;
 
 - (NSString *)plistPathByName:(NSString *)name;
 

@@ -10,6 +10,8 @@
 #import "HJNavigationViewController.h"
 #import "HJTabViewController.h"
 #import "ChangeThemeController.h"
+#import "ThemeManager.h"
+#import "ThemePath.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +25,10 @@
     
     //标题栏两边按钮颜色   非customview类型
     [UINavigationBar appearance].tintColor = [UIColor purpleColor];
+    
+    ThemePath * path = [[ThemePath alloc] initMainbundlePath];
+    [[ThemeManager sharedInstance] setThemeWithPlistName:@"Red" andThemePath:path];
+    
     
     HJTabViewController * rootViewController = [HJTabViewController new];
     HJNavigationViewController * fistNaviController = [[HJNavigationViewController alloc] initWithRootViewController:[ChangeThemeController new]];

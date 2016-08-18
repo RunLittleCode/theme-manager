@@ -7,7 +7,7 @@
 //
 
 #import "ChangeThemeController.h"
-
+#import "ThemePath.h"
 
 
 @interface ChangeThemeController ()
@@ -24,11 +24,19 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"account_share"] style:UIBarButtonItemStyleDone target:self action:nil];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"测试" style:UIBarButtonItemStyleDone target:self action:nil];
     
-    UIButton * changeButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 80, 100, 100)];
-    [changeButton setTitle:@"change theme" forState:UIControlStateNormal];
-    [changeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [changeButton addTarget:self action:@selector(blueButtonAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:changeButton];
+    UIButton * yellowButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 80, 100, 100)];
+    [yellowButton setBackgroundColor:[UIColor yellowColor]];
+    [yellowButton setTitle:@"Yellow" forState:UIControlStateNormal];
+    [yellowButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [yellowButton addTarget:self action:@selector(blueButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:yellowButton];
+    
+    UIButton * redButton = [[UIButton alloc] initWithFrame:CGRectMake(200, 80, 100, 100)];
+    [redButton setBackgroundColor:[UIColor redColor]];
+    [redButton setTitle:@"Red" forState:UIControlStateNormal];
+    [redButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [redButton addTarget:self action:@selector(redButtonAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:redButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,7 +57,14 @@
 
 #pragma mark - button action
 - (void)blueButtonAction {
-    [ThemeManager sharedInstance].colorString = @"#7ad2f9";
+    ThemePath * path = [[ThemePath alloc] initSandboxPathWith:@"Yellow"];
+    [[ThemeManager sharedInstance] setThemeWithPlistName:@"Yellow" andThemePath:path];
+    [[NSNotificationCenter defaultCenter] postNotificationName:kThemeChangeNotification object:nil];
+}
+
+- (void)redButtonAction {
+    ThemePath * path = [[ThemePath alloc] initMainbundlePath];
+    [[ThemeManager sharedInstance] setThemeWithPlistName:@"Red" andThemePath:path];
     [[NSNotificationCenter defaultCenter] postNotificationName:kThemeChangeNotification object:nil];
 }
 @end

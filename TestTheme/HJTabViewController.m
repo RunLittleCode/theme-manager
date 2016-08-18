@@ -41,7 +41,7 @@
 - (void)refreashThemeUI {
     //标题栏  标题属性设置-颜色
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary
-                                                       dictionaryWithObjectsAndKeys: [UIColor colorForHex:[ThemeManager sharedInstance].colorString],
+                                                       dictionaryWithObjectsAndKeys: [[ThemeManager sharedInstance] colorForKeyPath:kThemeColorBase],
                                                        NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
     [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary
                                                        dictionaryWithObjectsAndKeys: [UIColor blackColor],
@@ -50,8 +50,8 @@
     for (UIViewController * itemController in self.viewControllers) {
         UITabBarItem * item =  itemController.tabBarItem;
         if (item) {
-            item.image = [UIImage imageNamed:@"account_share"];
-            item.selectedImage = [UIImage imageNamed:@"account_share"];
+            item.image = [[[ThemeManager sharedInstance] imageForKeyPath:kThemeImageSelectTab] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            item.selectedImage = [[[ThemeManager sharedInstance] imageForKeyPath:kThemeImageSelectTab] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         }
     }
 }

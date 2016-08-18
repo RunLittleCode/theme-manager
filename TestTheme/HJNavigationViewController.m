@@ -41,14 +41,14 @@
 #pragma mark - UI method
 - (void)refreashThemeUI {
     //标题栏  标题属性设置-颜色
-    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor greenColor]}];
+    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
     //标题栏背景色
-    [self.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor colorForHex:[ThemeManager sharedInstance].colorString]]
+    [self.navigationBar setBackgroundImage:[UIImage imageWithColor:[[ThemeManager sharedInstance] colorForKeyPath:kThemeColorBase]]
                              forBarMetrics:UIBarMetricsDefault];
     
     //标题栏分隔线颜色
-    [self.navigationBar setShadowImage:[UIImage imageWithColor:[UIColor colorForHex:[ThemeManager sharedInstance].colorString] size:CGSizeMake(10, 0.5) cornerRadius:0]];
+    [self.navigationBar setShadowImage:[UIImage imageWithColor:[[ThemeManager sharedInstance] colorForKeyPath:kThemeColorBase] size:CGSizeMake(10, 0.5) cornerRadius:0]];
 }
 
 #pragma mark - notification

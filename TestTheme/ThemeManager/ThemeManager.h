@@ -7,10 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#define kThemeColorBase @"Global.backgroundColor"
+#define kThemeImageSelectTab @"SelectThemeCell.iconImage"
+
+
+@class ThemePath;
 
 @interface ThemeManager : NSObject
 
 + (ThemeManager *)sharedInstance;
 
-@property (nonatomic, strong) NSString * colorString;
+- (void)setThemeWithPlistName:(NSString *)plistName andThemePath:(ThemePath *)themePath;
+
+- (NSString *)stringForKeyPath:(NSString *)keyPath;
+
+- (UIColor *)colorForKeyPath:(NSString *)keyPath;
+
+- (UIImage *)imageForKeyPath:(NSString *)keyPath;
 @end

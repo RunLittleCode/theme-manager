@@ -20,6 +20,8 @@
 		F2B4BAD11D6451350075CD16 /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B4BAD01D6451350075CD16 /* UIImage+Color.m */; };
 		F2B4BAD51D64593C0075CD16 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B4BAD41D64593C0075CD16 /* UIColor+Hex.m */; };
 		F2B4BAD91D6462A90075CD16 /* ThemePath.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B4BAD81D6462A90075CD16 /* ThemePath.m */; };
+		F2C9B47F1D6559D100D97FEE /* Red.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2C9B47E1D6559D100D97FEE /* Red.plist */; };
+		F2C9B4811D656E2100D97FEE /* Yellow.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2C9B4801D656E2100D97FEE /* Yellow.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		F2B4BAD41D64593C0075CD16 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		F2B4BAD71D6462A90075CD16 /* ThemePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemePath.h; sourceTree = "<group>"; };
 		F2B4BAD81D6462A90075CD16 /* ThemePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemePath.m; sourceTree = "<group>"; };
+		F2C9B47E1D6559D100D97FEE /* Red.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Red.plist; sourceTree = "<group>"; };
+		F2C9B4801D656E2100D97FEE /* Yellow.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Yellow.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 		F2B4BAA11D643E1F0075CD16 /* TestTheme */ = {
 			isa = PBXGroup;
 			children = (
+				F2C9B4801D656E2100D97FEE /* Yellow.plist */,
+				F2C9B47E1D6559D100D97FEE /* Red.plist */,
 				F2B4BAC21D643ECA0075CD16 /* ThemeManager */,
 				F2B4BAA51D643E1F0075CD16 /* AppDelegate.h */,
 				F2B4BAA61D643E1F0075CD16 /* AppDelegate.m */,
@@ -182,7 +188,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2B4BAB21D643E200075CD16 /* LaunchScreen.storyboard in Resources */,
+				F2C9B4811D656E2100D97FEE /* Yellow.plist in Resources */,
 				F2B4BAAF1D643E200075CD16 /* Assets.xcassets in Resources */,
+				F2C9B47F1D6559D100D97FEE /* Red.plist in Resources */,
 				F2B4BAAD1D643E200075CD16 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +364,7 @@
 				F2B4BAB81D643E200075CD16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
