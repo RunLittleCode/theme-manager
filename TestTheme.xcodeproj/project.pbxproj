@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F28C73421D65CEDF005E45D7 /* ThemeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F28C73411D65CEDF005E45D7 /* ThemeView.m */; };
+		F28C73451D65D167005E45D7 /* HJThemeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F28C73441D65D167005E45D7 /* HJThemeLabel.m */; };
+		F28C73481D65D176005E45D7 /* HJThemeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F28C73471D65D176005E45D7 /* HJThemeButton.m */; };
+		F28C734B1D65D187005E45D7 /* HJThemeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = F28C734A1D65D187005E45D7 /* HJThemeImageView.m */; };
 		F2B4BAA41D643E1F0075CD16 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B4BAA31D643E1F0075CD16 /* main.m */; };
 		F2B4BAA71D643E1F0075CD16 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B4BAA61D643E1F0075CD16 /* AppDelegate.m */; };
 		F2B4BAAA1D643E1F0075CD16 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B4BAA91D643E1F0075CD16 /* ViewController.m */; };
@@ -25,6 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F28C73401D65CEDF005E45D7 /* ThemeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeView.h; sourceTree = "<group>"; };
+		F28C73411D65CEDF005E45D7 /* ThemeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeView.m; sourceTree = "<group>"; };
+		F28C73431D65D167005E45D7 /* HJThemeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJThemeLabel.h; sourceTree = "<group>"; };
+		F28C73441D65D167005E45D7 /* HJThemeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJThemeLabel.m; sourceTree = "<group>"; };
+		F28C73461D65D176005E45D7 /* HJThemeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJThemeButton.h; sourceTree = "<group>"; };
+		F28C73471D65D176005E45D7 /* HJThemeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJThemeButton.m; sourceTree = "<group>"; };
+		F28C73491D65D187005E45D7 /* HJThemeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJThemeImageView.h; sourceTree = "<group>"; };
+		F28C734A1D65D187005E45D7 /* HJThemeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJThemeImageView.m; sourceTree = "<group>"; };
 		F2B4BA9F1D643E1F0075CD16 /* TestTheme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestTheme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B4BAA31D643E1F0075CD16 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F2B4BAA51D643E1F0075CD16 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -126,6 +138,14 @@
 				F2B4BAC41D643EDA0075CD16 /* ThemeManager.m */,
 				F2B4BAD71D6462A90075CD16 /* ThemePath.h */,
 				F2B4BAD81D6462A90075CD16 /* ThemePath.m */,
+				F28C73401D65CEDF005E45D7 /* ThemeView.h */,
+				F28C73411D65CEDF005E45D7 /* ThemeView.m */,
+				F28C73431D65D167005E45D7 /* HJThemeLabel.h */,
+				F28C73441D65D167005E45D7 /* HJThemeLabel.m */,
+				F28C73461D65D176005E45D7 /* HJThemeButton.h */,
+				F28C73471D65D176005E45D7 /* HJThemeButton.m */,
+				F28C73491D65D187005E45D7 /* HJThemeImageView.h */,
+				F28C734A1D65D187005E45D7 /* HJThemeImageView.m */,
 			);
 			path = ThemeManager;
 			sourceTree = "<group>";
@@ -202,11 +222,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F28C734B1D65D187005E45D7 /* HJThemeImageView.m in Sources */,
+				F28C73421D65CEDF005E45D7 /* ThemeView.m in Sources */,
 				F2B4BABB1D643E640075CD16 /* HJNavigationViewController.m in Sources */,
 				F2B4BAC51D643EDA0075CD16 /* ThemeManager.m in Sources */,
 				F2B4BAAA1D643E1F0075CD16 /* ViewController.m in Sources */,
 				F2B4BAA71D643E1F0075CD16 /* AppDelegate.m in Sources */,
 				F2B4BAD91D6462A90075CD16 /* ThemePath.m in Sources */,
+				F28C73481D65D176005E45D7 /* HJThemeButton.m in Sources */,
+				F28C73451D65D167005E45D7 /* HJThemeLabel.m in Sources */,
 				F2B4BAD51D64593C0075CD16 /* UIColor+Hex.m in Sources */,
 				F2B4BAC81D64409D0075CD16 /* HJTabViewController.m in Sources */,
 				F2B4BAD11D6451350075CD16 /* UIImage+Color.m in Sources */,
