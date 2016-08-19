@@ -10,4 +10,8 @@
 
 @interface HJThemeImageView : UIImageView
 
+@property (nonatomic, copy) NSString * theme_backgroundColor;
+
+@property (nonatomic, copy) NSString * theme_image;
+
 @end
